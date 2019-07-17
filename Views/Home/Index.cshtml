@@ -1,0 +1,50 @@
+﻿@model User
+<div class="Header">
+    <h1>Welcome to (Site Name)!</h1>
+    <a style="margin-left: 96%;"href="/signin">Sign in</a>
+</div>
+<div>
+    <span asp-asp-validation-for="FirstName"></span>
+    <span asp-asp-validation-for="LastName"></span>
+    <span asp-asp-validation-for="Email"></span>
+    <span asp-asp-validation-for="Password"></span>
+    <span asp-asp-validation-for="ComparePassword"></span>
+</div>
+<form asp-action="Register" asp-controller="Home" method="post">
+    <div class="FirstName">
+    <label asp-for="FirstName"></label>
+    <input asp-for="FirstName" class="form-control" placeholder="First Name">
+    </div>
+
+    <div class="LastName">
+    <label asp-for="LastName"></label>
+    <input asp-for="LastName" class="form-control" placeholder="Last Name">
+    </div>
+
+    <div class="Email">
+    <label asp-for="Email"></label>
+    <input asp-for="Email" class="form-control" placeholder="Email">
+    </div>
+
+    <div class="Password">
+    <label asp-for="Password"></label>
+    <input asp-for="Password" class="form-control" placeholder="Password">
+    </div>
+
+    <div class="ComparePassword">
+    <label asp-for="ComparePassword"></label>
+    <input asp-for="ComparePassword" class="form-control" placeholder="Confirm Password">
+    </div><br>
+    <input type="submit" class="btn btn-danger" value="Register">
+
+    <!-- <label asp-for="FirstName"></label>
+    <input asp-for="FirstName"><br>
+    <label asp-for="LastName"></label>
+    <input asp-for="LastName"><br>
+    <label asp-for="Email"></label>
+    <input asp-for="Email"><br>
+    <label asp-for="Password"></label>
+    <input asp-for="Password"><br>
+    <label asp-for="ComparePassword"></label>
+    <input asp-for="ComparePassword"><br> -->
+</form>
